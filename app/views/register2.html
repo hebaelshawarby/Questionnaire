@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6 lt8"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7 lt8"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8 lt8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="UTF-8" />
+        <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  -->
+        <title>Login and Registration Form with HTML5 and CSS3</title>
+
+    <link rel="stylesheet" type="text/css" href="/public/css/nav2.css">
+    </head>
+    <style>
+  .required:after {
+  content: " *";
+  color: red;
+}
+.divv {
+    border-radius: 5px;
+    padding: 35px;
+}
+
+</style>
+    <body>
+        <div class="container">
+           
+            <header>
+                <h1>Registration Form</h1>
+        
+            </header>
+            <section>       
+                <div id="container_demo" >
+                    <!-- hidden anchor to stop jump http://www.css3create.com/Astuce-Empecher-le-scroll-avec-l-utilisation-de-target#wrap4  -->
+                    <a class="hiddenanchor" id="toregister"></a>
+                    <a class="hiddenanchor" id="tologin"></a>
+                    <div id="wrapper">
+                        <div id="login" class="animate form">
+                            <form  ng-submit="MainController.newUser(data)" class = "divv"> 
+                                <h1>Register</h1> 
+                                <p> 
+                                    <label for="name"  class = "required" class="uname" > Your Name </label>
+                               
+          <input type="text"  required ng-model="data.name">
+                                </p>
+                             <p> 
+                                    <label for="username"  class = "required" class="uname" > Your UserName </label>
+                               
+          <input type="text"  required ng-model="data.username">
+                                </p>  
+
+                                <p> 
+                                    <label for="email"  class = "required" class="uname" > Your Email </label>
+                               
+          <input type="email"required ng-model="data.email" placeholder= "some_name@some_domain" >
+                                </p>
+
+                                <p> 
+                                    <label for="password"  class = "required" class="uname" > Your Password </label>
+                               
+        <input type="password" required ng-model="data.password" >
+                                </p>      
+
+
+
+                                
+
+                                        <button type="submit" class="btn btn-default">Submit</button>
+
+                       </form>
+
+                        <p class="change_link">  
+                                    Already a member ?
+                                    <a href="#login" class="to_register"> Go and log in </a>
+                                </p>
+                        </div>
+
+                  
+                </div>  
+            </section>
+        </div>
+    </body>
+</html>

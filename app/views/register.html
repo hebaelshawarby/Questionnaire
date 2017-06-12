@@ -1,0 +1,62 @@
+<style>
+  .required:after {
+  content: " *";
+  color: red;
+}
+.divv {
+    border-radius: 5px;
+    padding: 35px;
+}
+
+</style>
+
+<form ng-submit="MainController.newUser(data)" class = "divv">
+<h2> SERVICE PROVIDER REGISTERING  </h2> 
+<div class="divv">
+
+   <div class="form-group">
+          <label class = "required">Name</label>
+          <input type="text" class="form-control" required ng-model="data.name">
+        </div> 
+       
+        <div class="form-group">
+          <label class = "required" >UserName</label>
+          <input type="text" class="form-control"  required ng-model="data.username" >
+        </div>
+
+   
+        
+        <div class="form-group">
+          <label class = "required">E-mail</label>
+          <input type="email" class="form-control" required ng-model="data.email" placeholder= "some_name@some_domain" >
+        </div>
+        <div class="form-group">
+          <label class = "required" >Password</label>
+          <input type="password" class="form-control" required ng-model="data.password" >
+        </div>
+         
+
+
+
+         <div class= "row show-hide-message"  ng-show="isErr">
+  <div   class="alert alert-danger"> {{errorMsg}}
+  </div>
+</div>
+
+  <div class= "row show-hide-message" ng-show="isSuccess" >
+  <div class="alert alert-success"> {{successMsg}}
+    
+  </div>
+</div>
+
+       
+        <button type="submit" class="btn btn-default">Submit</button>
+
+
+<br>
+<br>
+
+
+        </div> 
+
+</form>

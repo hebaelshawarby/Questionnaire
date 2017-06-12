@@ -1,0 +1,43 @@
+<br>
+<div>
+<h1> Questionnaire Details  </h1> 
+</div>
+<style>
+  .required:after {
+  content: " *";
+  color: red;
+}
+.divv {
+    border-radius: 5px;
+    padding: 35px;
+}
+
+</style>
+<div ng-controller="MainController" class="divv">
+  
+
+<form name ="myForm" ng-submit="MainController.newQuestionnaire(data)">
+   <div class="form-group">
+          <label class = "required" >Questionnaire Name</label>
+          
+          <input type="text" class="form-control" required ng-model="data.title" required>
+          </div> 
+
+   <div class="form-group">
+          <label class = "required" >Questionnaire Description</label>
+          
+          <textarea class="form-control"  required ng-model="data.description" required></textarea>
+           
+    </div> 
+
+       
+        
+      
+        <button type="submit" class="btn btn-default">Continue</button>
+      
+
+
+
+
+</form>
+</div>

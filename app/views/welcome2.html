@@ -1,0 +1,19 @@
+
+          <div id="output" class="row" ng-controller="MainController">
+              <div class="col-lg-40">
+                  <h3>Questionnaire</h3>
+                  <br>
+
+                  <h2>Questionnaire Title: {{MainController.qName}}</h2>
+                  <p>Questionnaire Description: {{MainController.qDescription}}</p>
+              </div>
+          </div>
+          <hr>
+          <div class="row text-center">
+
+              <div class="col-md-12 col-sm-12 hero-feature">
+                    <ng-form-reader input="MainController.output" data="data"></ng-form-reader>
+              </div>
+
+
+          </div>

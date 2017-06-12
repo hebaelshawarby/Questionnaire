@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en"  ng-app="myApp" ng-controller="MainController">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Questionnaire</title>
+
+
+
+    <script src="lib/angular.min.js"></script>
+    <script src="/lib/jquery-2.2.0.min.js"></script>
+
+    <script src="/lib/angular-route.min.js"></script>
+    <script src="/lib/bootstrap.min.js"></script>
+    <script src="/lib/ui-bootstrap-tpls-1.2.5.min.js"></script>
+    <script src="/lib/draganddrop.min.js"></script>
+    <script src="/lib/ng-form-generator.min.js"></script>
+<!-- Modules -->
+<script src="starter.js"></script>
+<script src="routes.js"></script>
+
+<!-- Controllers -->
+<script src="/controllers/MainController.js"></script>
+
+<!-- services -->
+<script src="/services/indexSrv.js"></script>
+
+<!-- directives -->
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+
+<link rel="stylesheet" href="/lib/ng-form-generator.min.css">
+
+
+    <!-- Custom styles for this template -->
+    <link href="public/css/nav.css" rel="stylesheet">
+
+  </head>
+
+  <body ng-app="myApp" ng-controller="MainController as MainController">
+
+    <div class="container">
+
+      <!-- The justified navigation menu is meant for single line per list item.
+           Multiple lines will require custom code not provided by Bootstrap. -->
+      <div class="masthead">
+        <h3 class="text-muted">Project name</h3>
+        <nav>
+          <ul class="nav nav-justified">
+            <li class="active"><a href="#/">Home</a></li>
+            <li ng-show="isuser" ><a href="#/userDashboard">Projects</a></li>
+            <li><a href="#">Services</a></li>
+            <li ng-show="isuser" ng-click="MainController.logout()" ><a  href="#/" >Logout</a></li>
+            <li ng-show="!isuser" ><a href="#/login">Login/Register</a></li>
+          </ul>
+        </nav>
+      </div>
+<div ng-view >
+  
+</div>
+     
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  </body>
+</html>
